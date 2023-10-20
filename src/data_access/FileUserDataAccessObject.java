@@ -106,6 +106,14 @@ public class FileUserDataAccessObject implements SignupUserDataAccessInterface, 
             ret.append(user).append("\n");
         }
         accounts.clear();
+        try{
+            BufferedWriter writer = new BufferedWriter(new FileWriter(csvFile));
+            for (int i = 0; i < users.length; i++) {
+                writer.write("");
+            }
+        }catch (IOException e){
+            throw new RuntimeException(e);
+        }
         return ret.toString();
     }
 }
