@@ -1,5 +1,5 @@
 package use_case.clear_users;
 
 public interface ClearUserDataAccessInterface {
-    public String clearUsers();
+    String clearUsers();
 }
